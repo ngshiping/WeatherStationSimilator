@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="WeatherStationSimilator.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WeatherStationSimilator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Name="messageTB" TextWrapping="Wrap" Margin="12" Height="120" />
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="Temperature" HorizontalAlignment="Center" TextAlignment="Center" />
+                <TextBlock Name="temperatureTB" FontSize="24" FontWeight="Thin" HorizontalAlignment="Center" TextAlignment="Center" />
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Center" Grid.Column="1">
+                <TextBlock Text="Humidity" HorizontalAlignment="Center" TextAlignment="Center" />
+                <TextBlock Name="humidityTB" FontSize="24" FontWeight="Thin" HorizontalAlignment="Center" TextAlignment="Center" />
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Center" Grid.Column="2">
+                <TextBlock Text="Pressure" HorizontalAlignment="Center" TextAlignment="Center" />
+                <TextBlock Name="pressureTB" FontSize="24" FontWeight="Thin" HorizontalAlignment="Center" TextAlignment="Center" />
+            </StackPanel>
+
+        </Grid>
+
+        <Button Name="startBtn" Grid.Row="2" Content="Start" Height="48"
+                HorizontalAlignment="Stretch" Click="startBtn_Click" />
+    </Grid>
+</Page>
